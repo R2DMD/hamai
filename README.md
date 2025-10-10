@@ -11,8 +11,9 @@ The Pipeline consists of the following steps:
 
 | # | Step | Description | Technology | Script |
 |----------|----------|----------|----------|----------|
-| 1 | RX (Receive) |  | SoX | rx.sh |
-| 2 | STT (Speach-to-text) |  | Whisper AI | stt.sh |
-| 3 | GPT (Chat inference) |  | LLM GPT | gpt.sh |
-| 4 | TTS (Text-to-speech) |  | Piper, Silero | tts.sh |
-| 5 | TX (Transmission) |  | Sox, Arduino | tx.sh |
+| 1 | RX (Receive) | At this stage, the SoX tool with a silence filter is used to record audio from a radio receiver.
+When FM modulation is used, the squelch should be set so that it only lets signal through not the noise. | SoX | rx.sh |
+| 2 | STT (Speach-to-text) | At this stage, OpenAI Whisper LLM is used to transcribe captured audio. | Whisper AI | stt.sh |
+| 3 | GPT (Chat inference) | A text message is fed to the GPT of your choice as a prompt to LLM. Ollama’s REST API is used to communicate with LLM. | LLM GPT via Ollama | gpt.sh |
+| 4 | TTS (Text-to-speech) | GPT’s answer is converted from text to audio. | Piper, Silero | tts.sh |
+| 5 | TX (Transmission) | At this step, SoX is used to play audio and Arduino to switch PTT on the radio to trigger transmission. | Sox, Arduino | tx.sh |
