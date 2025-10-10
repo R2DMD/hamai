@@ -17,7 +17,7 @@ The Pipeline consists of the following steps:
 | 4 | TTS (Text-to-speech) | GPT’s answer is converted from text to audio. | Piper, Silero | tts.sh |
 | 5 | TX (Transmission) | At this step, SoX is used to play audio and Arduino to switch PTT on the radio to trigger transmission. | Sox, Arduino | tx.sh |
 
-**Hardware requirements**
+## Hardware requirements
 To run the project, you will need:
 - Radio with EXT port for connecting external speaker and ability to inject audio through the mic wiring.
 - Arduino board and a relay module for activating the radio's PTT button.
