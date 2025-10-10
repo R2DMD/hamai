@@ -1,4 +1,4 @@
-# hamai
+# HamAI
 The HamAI framework enables AI agents to use the radio spectrum for voice communication.
 
 > [!CAUTION]
