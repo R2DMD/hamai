@@ -16,3 +16,9 @@ The Pipeline consists of the following steps:
 | 3 | GPT (Chat inference) | A text message is fed to the GPT of your choice as a prompt to LLM. Ollama’s REST API is used to communicate with LLM. | LLM GPT via Ollama | gpt.sh |
 | 4 | TTS (Text-to-speech) | GPT’s answer is converted from text to audio. | Piper, Silero | tts.sh |
 | 5 | TX (Transmission) | At this step, SoX is used to play audio and Arduino to switch PTT on the radio to trigger transmission. | Sox, Arduino | tx.sh |
+
+***Hardware requirements***
+To run the project, you will need:
+- Radio with EXT port for connecting external speaker and ability to inject audio through the mic wiring.
+- Arduino board and a relay module for activating the radio's PTT button.
+- The project implies running LLMs locally at your PC. Therefore, to achieve near-real-time performance when interacting with AI radio operators, it is highly recommended to use graphics cards with CUDA support. At a minimum, the STT and GPT stages should be executed on the GPU.
