@@ -1,4 +1,5 @@
 #!/bin/bash
+# Script version date 2026-01-29
 
 # ./pipeline - Main working dir
 
@@ -62,6 +63,13 @@ fi
 # Creating inbox dir for transmitted audio
 if [[ ! -d "./processed/tx" ]]; then
   mkdir ./processed/tx
+fi
+
+# ./profiles - Dir for storing profiles
+
+# Creating inbox dir for profiles
+if [[ ! -d "./profiles" ]]; then
+  mkdir ./profiles
 fi
 
 
